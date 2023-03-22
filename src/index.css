@@ -5,7 +5,7 @@ body {
 
 #root {
   margin: auto;
-  filter: saturate(0.75);
+  filter: saturate(0.75) sepia(0.25)
 }
 
 .grid-container {
@@ -13,8 +13,6 @@ body {
   grid-template-columns: repeat(5, 20vh);
   grid-template-rows: repeat(5, 20vh);
   column-gap: 0;
-  /* box-shadow: 0 0 50px 15px #48abe0,
-              0 0 25px 10px white; */
   box-shadow:
               0 0 60px 30px #fff,
               0 0 100px 60px #f0f,
@@ -28,5 +26,7 @@ body {
 .tv-content {
   position: absolute;
   width: 20vh; 
-  height:20vh;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
 }

@@ -4,6 +4,7 @@ import linkedinLogo from './assets/images/linkedin.png'
 import colorBars from './assets/images/SMPTE_Color_Bars.svg.png'
 import tvStatic from './assets/images/static.gif'
 import resumeIcon from './assets/images/resume-icon.png'
+import codeIcon from './assets/images/codeicon.png'
 import Resume from './assets/Resume.pdf'
 
 function App() {
@@ -24,8 +25,14 @@ function App() {
       image: resumeIcon,
       link: Resume
     },
-    null,
-    null,
+    {
+      image: colorBars
+    },
+    {
+      name: 'code',
+      image: codeIcon,
+      link: 'https://github.com/cobbettn'
+    },
 
     null,
     null,
@@ -58,7 +65,7 @@ function App() {
         <TVFrame link={`${channel?.link}`} key={`channel-${i}`}>
           <img 
           className='channelImage' 
-          style={{width: '20vh'}} 
+          style={{width: '15vh', height: '15vh'}} 
           src={channel?.image ?? tvStatic} 
           alt="" />
         </TVFrame>

@@ -7,14 +7,15 @@ const TVFrame = ({ children, link }) => {
   // const { height, width } = useWindowDimensions
   const commonStyles = {position: 'absolute', width:'20vh', height:'20vh'}
   const [glow, setGlow] = useState(false)
-  const onClick = () => {
-    if (link) {
+  const followLink = () => {
+    // has to be wrong
+    if (link !== 'undefined') {
       window.location.href = link
     }
   }
 
   return (
-    <div onClick={onClick} className='grid-item'>
+    <div onClick={followLink} className='grid-item'>
       <img
         onMouseEnter={() => {
           setGlow(true)
