@@ -18,5 +18,11 @@ body {
 }
 
 .channelImage {
-  filter: blur(1px);
+  filter: blur(0.025rem) brightness(0.8);
+}
+
+.tv-content {
+  position: absolute;
+  width: 20vh; 
+  height:20vh;
 }
