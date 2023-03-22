@@ -3,6 +3,8 @@ import githubLogo from './assets/images/GitHub_Logo_White.png'
 import linkedinLogo from './assets/images/linkedin.png'
 import colorBars from './assets/images/SMPTE_Color_Bars.svg.png'
 import tvStatic from './assets/images/static.gif'
+import resumeIcon from './assets/images/resume-icon.png'
+import Resume from './assets/Resume.pdf'
 
 function App() {
   // 5 x 5 grid
@@ -10,16 +12,20 @@ function App() {
     {
       name: 'github',
       image: githubLogo,
-      link: ''
+      link: 'https://github.com/cobbettn'
     },
     {
       name: 'linkedin',
       image: linkedinLogo,
-      link: ''
+      link: 'https://www.linkedin.com/in/nathan-cobbett/'
+    },
+    {
+      name: 'resume',
+      image: resumeIcon,
+      link: Resume
     },
     null,
     null,
-    null,
 
     null,
     null,
@@ -44,14 +50,17 @@ function App() {
     null,
     null,
     null,
-    
   ]
 
   return (
     <div className="grid-container">
       { channels.map((channel, i) => (
-        <TVFrame key={`channel-${i}`}>
-          <img className='channelImage' style={{width: '20vh'}} src={channel?.image ?? tvStatic} alt="" />
+        <TVFrame link={`${channel?.link}`} key={`channel-${i}`}>
+          <img 
+          className='channelImage' 
+          style={{width: '20vh'}} 
+          src={channel?.image ?? tvStatic} 
+          alt="" />
         </TVFrame>
       ))}
     </div>
