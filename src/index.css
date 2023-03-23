@@ -1,18 +1,24 @@
 body {
   display: flex;
   background-color: black;
+  /* background-size: cover; */
+  /* background-image: url("https://giphy.com/gifs/looping-infinite-loop-cmdrkitten-ftThncogkyzWEGf4fC"); */
 }
 
 #root {
   margin: auto;
-  filter: saturate(0.75) sepia(0.25)
+  filter: saturate(0.75) sepia(0.25);
+  /* background-size: cover;
+  background-image: url('./assets/images/SMPTE_Color_Bars.svg.png'); */
 }
 
 .grid-container {
+  background-color: black;
   display: grid;
   grid-template-columns: repeat(5, 20vh);
   grid-template-rows: repeat(5, 20vh);
   column-gap: 0;
+  margin: 10rem;
   box-shadow:
               0 0 60px 30px #fff,
               0 0 100px 60px #f0f,
