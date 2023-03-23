@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  background-color: black;
+}
+
+#root {
+  margin: auto;
+  filter: saturate(0.75) sepia(0.25)
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 20vh);
+  grid-template-rows: repeat(5, 20vh);
+  column-gap: 0;
+  box-shadow:
+              0 0 60px 30px #fff,
+              0 0 100px 60px #f0f,
+              0 0 140px 90px #0ff;
+}
+
+.channelImage {
+  filter: blur(0.025rem) brightness(0.8);
+}
+
+.tv-content {
+  position: absolute;
+  width: 20vh; 
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
