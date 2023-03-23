@@ -61,15 +61,17 @@ function App() {
 
   return (
     <div className="grid-container">
-      { channels.map((channel, i) => (
-        <TVFrame link={`${channel?.link}`} key={`channel-${i}`}>
-          <img 
-          className='channelImage' 
-          style={{width: '15vh', height: '15vh'}} 
-          src={channel?.image ?? tvStatic} 
-          alt="" />
-        </TVFrame>
-      ))}
+      { 
+        channels.map((channel, i) => (
+          <TVFrame link={`${channel?.link}`} key={`channel-${i}`}>
+            <img 
+            className='channelImage' 
+            style={{width: '15vh', height: '15vh'}} 
+            src={channel?.image ?? tvStatic} 
+            alt="" />
+          </TVFrame>
+        )) 
+      }
     </div>
   )
 }
