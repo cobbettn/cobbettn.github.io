@@ -1,16 +1,20 @@
 // import tvFrame from './assets/tv-frame.png';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import tvFrame from '../../assets/images/tv-alpha500px.png'
-import { useWindowDimensions } from '../../hooks/useWindowSize';
 
-const TVFrame = ({ children, link }) => {
+interface Props {
+  children?: ReactNode,
+  link: string
+}
+
+const TVFrame = ({ children, ...props } : Props) => {
   // const { height, width } = useWindowDimensions
   const commonStyles = {position: 'absolute', width:'20vh', height:'20vh'}
   const [glow, setGlow] = useState(false)
   const followLink = () => {
     // has to be wrong
-    if (link !== 'undefined') {
-      window.location.href = link
+    if (props.link !== 'undefined') {
+      window.location.href = props.link
     }
   }
 
@@ -27,7 +31,6 @@ const TVFrame = ({ children, link }) => {
         style={{zIndex: 100}} 
         src={tvFrame} 
         alt="Television Frame" />
-
       <div className='tv-content' style={{display: 'flex', filter: `brightness(${glow ? 2 : 1.5})`}} >
         { children }
       </div>

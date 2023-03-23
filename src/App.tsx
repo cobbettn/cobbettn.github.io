@@ -31,7 +31,7 @@ function App() {
     {
       name: 'code',
       image: codeIcon,
-      link: 'https://github.com/cobbettn'
+      link: 'https://github.com/cobbettn/cobbettn.github.io'
     },
 
     null,
