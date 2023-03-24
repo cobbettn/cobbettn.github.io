@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm run deploy
+      - run: npm run build
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
