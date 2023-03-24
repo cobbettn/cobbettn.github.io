@@ -61,6 +61,7 @@ function App() {
 
   return (
     <div className="grid-container">
+      <div>hey bud</div>
       { 
         channels.map((channel, i) => (
           <TVFrame link={`${channel?.link}`} key={`channel-${i}`}>
