@@ -1,31 +1,42 @@
 // import tvFrame from './assets/tv-frame.png';
 import { ReactNode, useState } from 'react';
 import tvFrame from '../../assets/images/tv-alpha500px.png'
+import React from 'react';
 
-interface Props {
-  children: ReactNode,
-  link: string
+interface Channel {
+  description: string,
+  name: string,
+  image?: string,
+  link?: string,
+  action?: any
 }
 
-const TVFrame = ({ children, ...props }: Props) => {
+interface TVFrameProps {
+  channel: Channel,
+  children: ReactNode
+}
+
+const TVFrame = ({channel, children}: TVFrameProps) => {
   const [glow, setGlow] = useState(false)
   const followLink = () => {
-    // has to be wrong
-    if (props.link !== 'undefined') {
-      window.location.href = props.link
+    if (channel.link) {
+      window.location.href = channel.link
+    }
+    if (channel.action) {
+      channel.action();
     }
   }
 
   return (
-    <div onClick={followLink} className='grid-item'>
+    <div onClick={followLink} className={`grid-item` && channel.link !== undefined ? 'linkHover' : ''}>
       <img
         onMouseEnter={() => setGlow(true)}
         onMouseLeave={() => setGlow(false)}
         className='tv-content'
-        style={{zIndex: 100}} 
+        style={{zIndex: 1}} 
         src={tvFrame} 
-        alt="Television Frame" />
-      <div className='tv-content' style={{display: 'flex', filter: `brightness(${glow ? 2 : 1.5})`}} >
+        alt={channel.description} />
+      <div className='tv-content' style={{display: 'flex', filter: `opacity(${glow ? 1 : 0.8})`}} >
         { children }
       </div>
     </div>

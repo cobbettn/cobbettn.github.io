@@ -13,35 +13,33 @@ function App() {
     {
       name: 'github',
       image: githubLogo,
-      link: 'https://github.com/cobbettn'
+      link: 'https://github.com/cobbettn',
+      description: 'my github profile',
     },
     {
       name: 'linkedin',
       image: linkedinLogo,
-      link: 'https://www.linkedin.com/in/nathan-cobbett/'
+      link: 'https://www.linkedin.com/in/nathan-cobbett/',
+      description: 'LinkedIn'
     },
     {
       name: 'resume',
       image: resumeIcon,
-      link: Resume
+      link: Resume,
+      description: 'my resume'
     },
     {
-      image: colorBars
+      name: 'in progress',
+      image: colorBars,
+      description: 'in progress'
     },
+
     {
       name: 'code',
       image: codeIcon,
-      link: 'https://github.com/cobbettn/cobbettn.github.io'
+      link: 'https://github.com/cobbettn/cobbettn.github.io',
+      description: 'repository for this site'
     },
-
-    null,
-    null,
-    null,
-    null,
-    null,
-
-    null,
-    null,
     null,
     null,
     null,
@@ -50,9 +48,7 @@ function App() {
     null,
     null,
     null,
-    null,
 
-    null,
     null,
     null,
     null,
@@ -63,16 +59,15 @@ function App() {
     <div className="grid-container">
       { 
         channels.map((channel, i) => (
-          <TVFrame link={`${channel?.link}`} key={`channel-${i}`}>
+          <TVFrame channel={channel ?? {name: '', description: ''}}  key={`channel-${i}`}>
             <img 
             className='channelImage' 
-            style={{width: '15vh', height: '15vh'}} 
             src={channel?.image ?? tvStatic} 
-            alt="" />
+            alt={channel?.description} />
           </TVFrame>
         )) 
       }
-    </div>
+    </div>   
   )
 }
 

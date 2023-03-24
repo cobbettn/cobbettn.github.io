@@ -15,8 +15,8 @@ body {
 .grid-container {
   background-color: black;
   display: grid;
-  grid-template-columns: repeat(5, 20vh);
-  grid-template-rows: repeat(5, 20vh);
+  grid-template-columns: repeat(4, 25vh);
+  grid-template-rows: repeat(4, 25vh);
   column-gap: 0;
   margin: 10rem;
   box-shadow:
@@ -26,13 +26,39 @@ body {
 }
 
 .channelImage {
-  filter: blur(0.025rem) brightness(0.8);
+  filter: blur(0.025rem);
+  align-items: center;
+  justify-content: center;
+  max-width: 20vh;
+  max-height: 20vh;
+  padding-bottom: 2rem;
 }
 
 .tv-content {
   position: absolute;
-  width: 20vh; 
-  height: 20vh;
+  width: 25vh; 
+  height: 25vh;
   align-items: center;
   justify-content: center;
+}
+
+.linkHover:hover {
+  cursor: pointer;
+}
+
+nav {
+  color: white;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+nav li {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
 }
