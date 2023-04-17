@@ -28,14 +28,15 @@ const TVFrame = ({channel, children}: TVFrameProps) => {
   }
 
   return (
-    <div onClick={followLink} className={`grid-item` && channel.link !== undefined ? 'linkHover' : ''}>
+    <div onClick={followLink} className={`grid-item` && channel.link !== undefined || channel.action !== undefined ? 'linkHover' : ''}>
       <img
         onMouseEnter={() => setGlow(true)}
         onMouseLeave={() => setGlow(false)}
         className='tv-content'
         style={{zIndex: 1}} 
         src={tvFrame} 
-        alt={channel.description} />
+        alt={channel.description} 
+        title={channel.description}/>
       <div className='tv-content' style={{display: 'flex', filter: `opacity(${glow ? 1 : 0.8})`}} >
         { children }
       </div>
