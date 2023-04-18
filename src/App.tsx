@@ -18,7 +18,7 @@ function App() {
       name: 'github',
       image: githubLogo,
       link: 'https://github.com/cobbettn',
-      description: 'my github profile',
+      description: 'My Github',
     },
     {
       name: 'linkedin',
@@ -30,12 +30,12 @@ function App() {
       name: 'resume',
       image: resumeIcon,
       link: Resume,
-      description: 'my resume'
+      description: 'My Resume'
     },
     {
       name: 'bio',
       image: myFace,
-      description: 'about me',
+      description: 'About me',
       action: () => handleOpen()
     },
 
@@ -43,9 +43,13 @@ function App() {
       name: 'code',
       image: codeIcon,
       link: 'https://github.com/cobbettn/cobbettn.github.io',
-      description: 'repository for this site'
+      description: 'Code for this webpage'
     },
-    null,
+    {
+      name: 'in progress',
+      image: colorBars,
+      description: 'in progress'
+    },
     null,
     null,
 
