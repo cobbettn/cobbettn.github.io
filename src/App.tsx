@@ -107,14 +107,14 @@ function App() {
             About me
           </Typography>
           <Typography component="p" pb={2}>
-            I like to build things with web technologies. 
-            I started programming as a hobby in my downtime and it eventually turned into a career.
-            Through my work as a software engineer I strive to create robust, accessible and performant applications that delight and empower users.
-            I'm open to job opportunites where I can solve interesting problems and further expand my skill set as an engineer.
+            I like to build things for the web. 
+            I started my programming journey out of curiosity, but it eventually became my career.
+            Through my work as a software engineer, I take pride in creating robust, accessible, and performant applications that delight and empower users.
+            I'm open to opportunites where I can solve interesting problems and further expand my skills as an engineer.
           </Typography>   
           <Typography component="p">
-            When I'm not on my computer I like spending time in the woods, retro gaming and bouldering.
-            I also enjoy taking pictures as a hobby and help run a small photography business. 
+            Outside of coding, I like spending time in the woods, retro gaming, and bouldering.
+            I also enjoy taking pictures as a hobby and help run a small photography business.
           </Typography>       
         </Box>
       </Modal>
