@@ -12,17 +12,25 @@ body {
   background-image: url('./assets/images/SMPTE_Color_Bars.svg.png'); */
 }
 
-.grid-container {
+.container {
   background-color: black;
-  display: grid;
-  grid-template-columns: repeat(4, 25vh);
-  grid-template-rows: repeat(4, 25vh);
-  column-gap: 0;
   margin: 10rem;
   box-shadow:
               0 0 60px 30px #fff,
               0 0 100px 60px #f0f,
               0 0 140px 90px #0ff;
+}
+
+.channel-container {
+  width: 100vh; 
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 25vh);
+  grid-template-rows: repeat(4, 25vh);
+  column-gap: 0;
 }
 
 .grid-item {
@@ -48,8 +56,6 @@ body {
   max-width: 22vh;
   padding-bottom: 4vh;
 }
-
-
 
 .linkHover:hover {
   cursor: pointer;

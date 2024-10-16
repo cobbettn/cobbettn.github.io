@@ -1,45 +1,38 @@
 // import tvFrame from './assets/tv-frame.png';
 import { ReactNode, useState } from 'react';
-import tvFrame from '../../assets/images/tv-alpha500px.png'
+import tvFrame from '../../assets/images/tv.png'
 import staticGif from '../../assets/images/static.gif';
+import { IChannel } from '../../data';
 import React from 'react';
 
-export interface IChannel {
-  description: string,
-  name: string,
-  image?: string,
-  link?: string,
-  content?: JSX.Element
-}
-
 interface ChannelProps {
-  channel: IChannel,
-  children: ReactNode
+  channel?: IChannel,
+  setView?: any,
 }
 
-const Channel = ({channel, children}: ChannelProps) => {
-  const [glow, setGlow] = useState(false)
-  const followLink = () => {
-    if (channel.link) {
+const Channel = ({channel, setView}: ChannelProps) => {
+  const click = () => {
+    console.log(channel?.view)
+    if (channel?.link) {
       // timer link here
       window.location.href = channel.link
     }
-    if (channel.content) {
-      // set view state here (channel.name)
+    if (channel?.view !== undefined) {
+      setView(channel.view);
     }
   }
 
   return (
-    <div onClick={followLink} className="grid-item">
+    <div onClick={click} className="grid-item">
       <img
         className='tv-frame' 
         src={tvFrame} 
       />
       <img 
         className='tv-content' 
-        src={channel.image ?? staticGif}
-        alt={channel.description} 
-        title={channel.description}
+        src={channel?.image ?? staticGif}
+        alt={channel?.description} 
+        title={channel?.description}
       />
     </div>
   );
