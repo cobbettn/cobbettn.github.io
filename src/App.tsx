@@ -1,61 +1,62 @@
-import TVFrame from './components/tv/TVFrame'
+import Channel from './components/channel/Channel'
 import githubLogo from './assets/images/GitHub_Logo_White.png'
 import linkedinLogo from './assets/images/linkedin.png'
 import colorBars from './assets/images/SMPTE_Color_Bars.svg.png'
 import tvStatic from './assets/images/static.gif'
 import resumeIcon from './assets/images/resume-icon.png'
 import codeIcon from './assets/images/codeicon.png'
-import myFace from './assets/images/about-icon.jpg'
+import bioIcon from './assets/images/about-icon.jpg'
 import Resume from './assets/Resume.pdf'
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import { useState } from 'react'
 
 function App() {
   const channels = [
+    // row 1
+    {
+      name: 'bio',
+      description: 'bio',
+      image: bioIcon,
+      content: (<div>bio</div>)
+    },
+    null,
+    null,
+    {
+      name: 'resume',
+      description: 'resume',
+      image: resumeIcon,
+      link: Resume,
+    },
+
+
+    null,
     {
       name: 'github',
+      description: 'github',
       image: githubLogo,
       link: 'https://github.com/cobbettn',
-      description: 'My Github',
     },
     {
       name: 'linkedin',
+      description: 'linkedin',
       image: linkedinLogo,
       link: 'https://www.linkedin.com/in/nathan-cobbett/',
-      description: 'LinkedIn'
     },
-    {
-      name: 'resume',
-      image: resumeIcon,
-      link: Resume,
-      description: 'My Resume'
-    },
-    {
-      name: 'bio',
-      image: myFace,
-      description: 'About me',
-      action: () => handleOpen()
-    },
+    null,
 
-    {
-      name: 'code',
-      image: codeIcon,
-      link: 'https://github.com/cobbettn/cobbettn.github.io',
-      description: 'Code for this webpage'
-    },
+
+    null,
     {
       name: 'in progress',
       image: colorBars,
       description: 'in progress'
     },
-    null,
-    null,
+    {
+      name: 'code',
+      image: codeIcon,
+      link: 'https://github.com/cobbettn/cobbettn.github.io',
+      description: 'github repository for this website'
+    },
 
-    null,
-    null,
-    null,
     null,
 
     null,
@@ -64,60 +65,23 @@ function App() {
     null,
   ]
 
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  const style = {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'black',
-    color: 'white',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-  };
-
   return (
     <>
+      <div>ncobbett.com</div>
       <div className="grid-container">
         { 
           channels.map((channel, i) => (
-            <TVFrame channel={channel ?? {name: '', description: ''}}  key={`channel-${i}`}>
+            <Channel channel={channel ?? {name: '', description: ''}}  key={`channel-${i}`}>
               <img 
-              className='channelImage' 
-              src={channel?.image ?? tvStatic} 
-              alt={channel?.description}
-              title={channel?.description} />
-            </TVFrame>
+                className='channelImage' 
+                src={channel?.image ?? tvStatic} 
+                alt={channel?.description}
+                title={channel?.description} 
+              />
+            </Channel>
           )) 
         }
       </div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2" pb={2}>
-            About me
-          </Typography>
-          <Typography component="p" pb={2}>
-            I like to build things for the web. 
-            I started my programming journey out of curiosity, but it eventually became my career.
-            Through my work as a software engineer, I take pride in creating robust, accessible, and performant applications that delight and empower users.
-            I'm open to opportunites where I can solve interesting problems and further expand my skills as an engineer.
-          </Typography>   
-          <Typography component="p">
-            Outside of coding, I like spending time in the woods, retro gaming, and bouldering.
-            I also enjoy taking pictures as a hobby and help run a small photography business.
-          </Typography>       
-        </Box>
-      </Modal>
     </>
   
   )

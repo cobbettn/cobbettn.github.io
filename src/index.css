@@ -25,22 +25,31 @@ body {
               0 0 140px 90px #0ff;
 }
 
-.channelImage {
-  filter: blur(0.025rem);
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tv-frame {
+  width: 25vh; 
+  height: 25vh;
+  z-index: 1;
+}
+
+
+.tv-content, .tv-frame {
+  position: absolute;
   align-items: center;
   justify-content: center;
-  max-width: 20vh;
-  max-height: 20vh;
-  padding-bottom: 5vh;
 }
 
 .tv-content {
-  position: absolute;
-  width: 25vh; 
-  height: 25vh;
-  align-items: center;
-  justify-content: center;
+  max-height: 20vh;
+  max-width: 22vh;
+  padding-bottom: 4vh;
 }
+
+
 
 .linkHover:hover {
   cursor: pointer;
