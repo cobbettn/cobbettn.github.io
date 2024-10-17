@@ -7,11 +7,15 @@ import { Channels } from './data'
 
 function App() {
   const [view, setView] = useState<Channels | null>(null);
+
+  const View = ({children}: any) => {
+    return <div onClick={() => setView(null)}>{children}</div>
+  }
   
   const renderView = () => {
     switch (view) {
       case Channels.bio:
-        return <Bio setView={setView}/>
+        return <View><Bio/></View>
       default:
         return <AllChannels channels={channels} setView={setView}/>;
     }

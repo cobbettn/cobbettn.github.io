@@ -1,5 +1,6 @@
 body {
   display: flex;
+  color: white;
   background-color: black;
   /* background-size: cover; */
   /* background-image: url("https://giphy.com/gifs/looping-infinite-loop-cmdrkitten-ftThncogkyzWEGf4fC"); */
@@ -24,6 +25,18 @@ body {
 .channel-container {
   width: 100vh; 
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel-container p, img {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.channel-container img {
+  height: 33%;
 }
 
 .grid-container {

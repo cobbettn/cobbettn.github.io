@@ -12,13 +12,12 @@ interface ChannelProps {
 
 const Channel = ({channel, setView}: ChannelProps) => {
   const click = () => {
-    console.log(channel?.view)
     if (channel?.link) {
       // timer link here
       window.location.href = channel.link
     }
     if (channel?.view !== undefined) {
-      setView(channel.view);
+      setView();
     }
   }
 
