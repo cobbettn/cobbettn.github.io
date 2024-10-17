@@ -2,7 +2,7 @@ import githubLogo from './assets/images/githubLogo.png'
 import linkedinLogo from './assets/images/linkedin.png'
 import colorBars from './assets/images/colorBars.png'
 import resumeIcon from './assets/images/resumeIcon.png'
-import codeIcon from './assets/images/codeIcon.png'
+import codeIcon from './assets/images/codeSymbol.png'
 import bioIcon from './assets/images/bioIcon.jpg'
 import inat from './assets/images/inat.jpg'
 import steam from  './assets/images/steam.png'
@@ -11,6 +11,7 @@ import Resume from './assets/Resume.pdf'
 
 export enum Channels {
   bio,
+  mushroomFinder
 }
 
 export interface IChannel {
