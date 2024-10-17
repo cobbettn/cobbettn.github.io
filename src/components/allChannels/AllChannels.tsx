@@ -1,6 +1,6 @@
 import { IChannel } from "../../data";
 
-import Channel from "../channel/Channel";
+import Channel from "./channel/Channel";
 
 interface AllChannelsProps {
   channels: (IChannel | undefined)[],

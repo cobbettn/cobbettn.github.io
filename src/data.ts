@@ -1,4 +1,4 @@
-import githubLogo from './assets/images/githubLogo.png'
+import githubLogo from './assets/images/github.png'
 import linkedinLogo from './assets/images/linkedin.png'
 import colorBars from './assets/images/colorBars.png'
 import resumeIcon from './assets/images/resumeIcon.png'
@@ -63,19 +63,19 @@ export const channels: (IChannel | undefined)[] = [
     image: colorBars,
   },
   {
-    name: 'code',
-    image: codeIcon,
-    link: 'https://github.com/cobbettn/cobbettn.github.io',
-    description: 'github repository for this website'
+    name: 'inaturalist',
+    description: 'inaturalist',
+    image: inat,
+    link: "https://www.inaturalist.org/people/skatepunk"
   },
   undefined,
 
   // row 4
   {
-    name: 'inaturalist',
-    description: 'inaturalist',
-    image: inat,
-    link: "https://www.inaturalist.org/people/skatepunk"
+    name: 'code',
+    image: codeIcon,
+    link: 'https://github.com/cobbettn/cobbettn.github.io',
+    description: 'github repository for this website'
   },
   undefined,
   undefined,
