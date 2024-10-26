@@ -76,23 +76,7 @@ body {
   padding-bottom: 4vh;
 }
 
-.linkHover:hover {
+.channel:hover {
   cursor: pointer;
 }
 
-nav {
-  color: white;
-}
-
-nav ul {
-  padding: 0;
-  display: flex;
-  justify-content: space-evenly;
-  
-}
-
-nav li {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-}
