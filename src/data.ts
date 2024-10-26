@@ -22,6 +22,7 @@ export interface IChannel {
   view?: Channels
 }
 
+// 16 channels
 export const channels: (IChannel | undefined)[] = [
   // row 1
   {
@@ -79,7 +80,6 @@ export const channels: (IChannel | undefined)[] = [
   },
   undefined,
   undefined,
-  ,
   {
     name: 'steam',
     description: 'steam',
