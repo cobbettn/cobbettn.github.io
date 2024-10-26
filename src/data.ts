@@ -11,7 +11,7 @@ import Resume from './assets/Resume.pdf'
 
 export enum Channels {
   bio,
-  mushroomFinder
+  mushroom
 }
 
 export interface IChannel {
@@ -57,10 +57,17 @@ export const channels: (IChannel | undefined)[] = [
 
   // row 3
   undefined,
+  // {
+  //   name: 'in progress',
+  //   description: 'in progress',
+  //   image: colorBars,
+  // },
   {
-    name: 'in progress',
-    description: 'in progress',
+    name: 'mushroom',
+    description: 'mushroom',
     image: colorBars,
+    view: Channels.mushroom
+  
   },
   {
     name: 'inaturalist',

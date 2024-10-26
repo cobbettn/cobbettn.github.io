@@ -39,6 +39,12 @@ body {
   height: 33%;
 }
 
+.mushroom {
+  flex-direction: column;
+  overflow: scroll;
+  max-height: 100vh;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 25vh);

@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import AllChannels from './components/allChannels/AllChannels'
-import { channels } from './data'
+import { channels, Channels } from './data'
 import Bio from './components/views/bio/Bio'
-import { Channels } from './data'
+
+import Mushroom from './components/views/mushroom/Mushroom'
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
     switch (view) {
       case Channels.bio:
         return <View><Bio/></View>
+      case Channels.mushroom:
+        return <Mushroom/>
       default:
         return <AllChannels channels={channels} setView={setView}/>;
     }
