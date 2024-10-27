@@ -19,31 +19,9 @@ body {
               0 0 140px 90px #0ff;
 }
 
-
-
-
-
 .mushroom {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.grid-container {
-  display: grid;
-  column-gap: 0;
-}
-
-.grid-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.tv-content, .tv-frame {
-  position: absolute;
-  align-items: center;
   justify-content: center;
 }
 
@@ -97,7 +75,21 @@ body {
   padding-bottom: calc(4 * var(--size-unit));
 }
 
+.tv-content, .tv-frame {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
 .grid-container {
   grid-template-columns: repeat(4, calc(25 * var(--size-unit)));
   grid-template-rows: repeat(4, calc(25 * var(--size-unit)));
+  display: grid;
+  column-gap: 0;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -26,6 +26,7 @@ const Channel = ({channel, setView}: ChannelProps) => {
       <img
         className='tv-frame' 
         src={tvFrame} 
+        style={{cursor: channel ? 'pointer': 'default'}}
       />
       <img 
         className='tv-content' 
