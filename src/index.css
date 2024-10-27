@@ -2,6 +2,7 @@ body {
   display: flex;
   color: white;
   background-color: black;
+  font-family: sans-serif;
 }
 
 #root {
@@ -18,23 +19,14 @@ body {
               0 0 140px 90px #0ff;
 }
 
-.channel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.channel-container p, img {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 
-.channel-container img {
-  height: 33%;
-}
+
 
 .mushroom {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .grid-container {
@@ -48,9 +40,6 @@ body {
   align-items: center;
 }
 
-.tv-frame {
-  z-index: 1;
-}
 
 .tv-content, .tv-frame {
   position: absolute;
@@ -82,11 +71,24 @@ body {
 .channel-container {
   width: calc(100 * var(--size-unit)); 
   height: calc(100 * var(--size-unit));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel-container p, img {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.channel-container img {
+  height: 33%;
 }
 
 .tv-frame {
   width: calc(25 * var(--size-unit)); 
   height: calc(25 * var(--size-unit));
+  z-index: 1;
 }
 
 .tv-content {

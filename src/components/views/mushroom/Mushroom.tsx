@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 interface INatObservation {
   taxon: {
@@ -48,15 +49,26 @@ export default () => {
   
   return(
     <div className='container channel-container mushroom'>
-      <div>perennial edible mushrooms:</div>
+      perennial edible mushrooms:
       <select multiple value={species} onChange={e => changeSpecies(e)}>
         { speciesOptions.map((spec, i) => <option value={spec} key={i}>{spec}</option>) }
       </select>
       
-      <div>radius (km)</div>
+      radius (km)
       <select value={radius} onChange={e => changeRadius(e)}>
         { radiusOptions.map((spec, i) => <option value={spec} key={i}>{spec}</option>) }
       </select>
+      <MapContainer style={{width: "100%", height: "100%"}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={[51.505, -0.09]}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </MapContainer>
     </div>
   )
 }
