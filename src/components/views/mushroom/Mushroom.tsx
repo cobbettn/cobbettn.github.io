@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react";
 
-interface Observation {
+interface INatObservation {
   taxon: {
     name: string,
     preferred_common_name: string
@@ -8,7 +8,7 @@ interface Observation {
 }
 
 export default () => {
-  const kmOptions = [
+  const radiusOptions = [
     5,
     10,
     25,
@@ -20,43 +20,43 @@ export default () => {
     'Morchella americana',
     'Grifola frondosa'
   ];
-  
-  const [species, setSpecies] = useState<string[]>();
-  const [obs, setObs] = useState<Observation[]>();  
-  
+
+  const [observations, setObservations] = useState<INatObservation[]>(); 
+  const [species, setSpecies] = useState<string[]>([speciesOptions[0]]);
+  const [radius, setRadius] = useState<number>(radiusOptions[2]); // 25km yields better testing results
+
   useEffect(() => {
+    if (!radius || !species) return; // short circuit until both inputs provided
+    
     navigator.geolocation.getCurrentPosition(pos => {
       const { latitude, longitude } = pos.coords;
       const obsEndpoint = 'https://api.inaturalist.org/v1/observations';
       const params = `?taxon_name=${species?.join(',')}&lat=${latitude}&` +
-      `lng=${longitude}&radius=${kmRadius}&order=desc&order_by=created_at`;
-      console.log('p', params);
+      `lng=${longitude}&radius=${radius}&order=desc&order_by=created_at`;
       try {
-        fetch(encodeURI(obsEndpoint + params)) 
+        fetch(encodeURI(obsEndpoint.concat(params))) 
           .then(res => res.json())
-          .then(data => setObs(data.results));
+          .then(data => setObservations(data.results));
       } catch (error) {
         console.error(error);
       }
     });
-  }, [species]);
+  }, [species, radius]);
 
-  const selectChange = ({target}: ChangeEvent<HTMLSelectElement>) => {
-    const selectedOpts = Array.from(target.selectedOptions).map(o => o.value)
-    console.log('s', selectedOpts);
-    setSpecies(selectedOpts);
-  }
+  const changeSpecies = ({target}: ChangeEvent<HTMLSelectElement>) => setSpecies(Array.from(target.selectedOptions).map(o => o.value));
+  const changeRadius = ({target}: ChangeEvent<HTMLSelectElement>) => setRadius(Number(target.value));
   
   return(
     <div className='container channel-container mushroom'>
-      <select multiple value={species} onChange={e => selectChange(e)}>
+      <div>perennial edible mushrooms:</div>
+      <select multiple value={species} onChange={e => changeSpecies(e)}>
         { speciesOptions.map((spec, i) => <option value={spec} key={i}>{spec}</option>) }
       </select>
-      <select value={kmRadius} onChange={e => selectChange(e)}>
-        { speciesOptions.map((spec, i) => <option value={spec} key={i}>{spec}</option>) }
+      
+      <div>radius (km)</div>
+      <select value={radius} onChange={e => changeRadius(e)}>
+        { radiusOptions.map((spec, i) => <option value={spec} key={i}>{spec}</option>) }
       </select>
-      { obs?.map((ob, i) => <div key={i}>{ ob.taxon.preferred_common_name }</div>) }
     </div>
   )
 }
-
