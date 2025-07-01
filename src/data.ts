@@ -6,6 +6,7 @@ import codeIcon from './assets/images/codeSymbol.png'
 import bioIcon from './assets/images/bioIcon.jpg'
 import inat from './assets/images/inat.jpg'
 import steam from  './assets/images/steam.png'
+import wordpress from './assets/images/wordpress.png'
 
 import Resume from './assets/Resume.pdf'
 
@@ -86,7 +87,12 @@ export const channels: (IChannel | undefined)[] = [
     description: 'github repository for this website'
   },
   undefined,
-  undefined,
+  {
+    name: 'blog',
+    description: 'blog',
+    image: wordpress,
+    link: 'https://blog.ncobbett.com'
+  },
   {
     name: 'steam',
     description: 'steam',
