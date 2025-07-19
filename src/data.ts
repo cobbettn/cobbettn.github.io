@@ -12,7 +12,9 @@ import Resume from './assets/Resume.pdf'
 
 export enum Channels {
   bio,
-  mushroom
+  mushroom,
+  pico8,
+  logicCalc
 }
 
 export interface IChannel {
@@ -69,7 +71,6 @@ export const channels: (IChannel | undefined)[] = [
     description: 'mushroom',
     image: colorBars,
     view: Channels.mushroom
-  
   },
   {
     name: 'inaturalist',

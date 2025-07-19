@@ -9,9 +9,13 @@ import Mushroom from './components/views/mushroom/Mushroom'
 function App() {
   const [view, setView] = useState<Channels | null>(null);
 
-  // each view navigates back to the 4x4 grid when clicked
   const View = ({children}: any) => {
-    return <div onClick={() => setView(null)}>{children}</div>
+    return (
+      <div className='view-container'>
+        {children}
+        <button className='close-button' onClick={() => setView(null)}>close</button>
+      </div>
+    );
   }
   
   const renderView = () => {
@@ -19,7 +23,7 @@ function App() {
       case Channels.bio:
         return <View><Bio/></View>
       case Channels.mushroom:
-        return <Mushroom/>
+        return <View><Mushroom/></View>
       default:
         return <AllChannels channels={channels} setView={setView}/>;
     }

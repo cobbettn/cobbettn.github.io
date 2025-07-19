@@ -54,6 +54,10 @@ body {
   align-items: center;
 }
 
+/*
+
+These are for the bio page only, remove
+
 .channel-container p, img {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -61,7 +65,9 @@ body {
 
 .channel-container img {
   height: 33%;
-}
+} 
+  
+*/
 
 .tv-frame {
   width: calc(25 * var(--size-unit)); 
@@ -81,7 +87,7 @@ body {
   justify-content: center;
 }
 
-.grid-container {
+.grid {
   grid-template-columns: repeat(4, calc(25 * var(--size-unit)));
   grid-template-rows: repeat(4, calc(25 * var(--size-unit)));
   display: grid;

@@ -1,5 +1,4 @@
 import me from '../../../assets/images/me.jpg'
-import React from 'react';
 
 const Bio = () => {
   return (

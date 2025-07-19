@@ -10,3 +10,6 @@ Todo:
 - add logic calculator channel
 - change design from 4x4 square to 3x3x3 cube
   - add controls for rotating cube
+- css:
+  - fit to viewport height for desktop, mobile horizontal orientation
+  - fit to viewport width for vertical orientation
