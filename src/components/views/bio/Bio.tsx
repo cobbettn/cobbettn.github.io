@@ -18,7 +18,7 @@ const Bio = () => {
           tinkering with retro game systems. 
         </p>
       </div>
-      <img src={me}/>
+      <img className='bio-image'src={me}/>
     </div>
   )
 }

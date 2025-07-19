@@ -34,17 +34,6 @@ export const channels: (IChannel | undefined)[] = [
     image: bioIcon,
     view: Channels.bio
   },
-  undefined,
-  undefined,
-  {
-    name: 'resume',
-    description: 'resume',
-    image: resumeIcon,
-    link: Resume,
-  },
-
-  // row 2
-  undefined,
   {
     name: 'github',
     description: 'github',
@@ -52,52 +41,58 @@ export const channels: (IChannel | undefined)[] = [
     link: 'https://github.com/cobbettn',
   },
   {
-    name: 'linkedin',
-    description: 'linkedin',
-    image: linkedinLogo,
-    link: 'https://www.linkedin.com/in/nathan-cobbett/',
-  },
-  undefined,
-
-  // row 3
-  undefined,
-  // {
-  //   name: 'in progress',
-  //   description: 'in progress',
-  //   image: colorBars,
-  // },
-  {
-    name: 'mushroom',
-    description: 'mushroom',
-    image: colorBars,
-    view: Channels.mushroom
-  },
-  {
-    name: 'inaturalist',
-    description: 'inaturalist',
-    image: inat,
-    link: "https://www.inaturalist.org/people/skatepunk"
-  },
-  undefined,
-
-  // row 4
-  {
-    name: 'code',
-    image: codeIcon,
-    link: 'https://github.com/cobbettn/cobbettn.github.io',
-    description: 'github repository for this website'
-  },
-  undefined,
-  {
     name: 'blog',
     description: 'blog',
     image: wordpress,
     link: 'https://blog.ncobbett.com'
   },
   {
+    name: 'linkedin',
+    description: 'linkedin',
+    image: linkedinLogo,
+    link: 'https://www.linkedin.com/in/nathan-cobbett/',
+  },
+
+  // row 2
+  {
     name: 'steam',
     description: 'steam',
     image: steam,
     link: "https://steamcommunity.com/profiles/76561198262196266/"
   },
+  {
+    name: 'code',
+    image: codeIcon,
+    link: 'https://github.com/cobbettn/cobbettn.github.io',
+    description: 'github repository for this website'
+  },
+    {
+    name: 'inaturalist',
+    description: 'inaturalist',
+    image: inat,
+    link: "https://www.inaturalist.org/people/skatepunk"
+  },
+  {
+    name: 'resume',
+    description: 'resume',
+    image: resumeIcon,
+    link: Resume,
+  },
+
+  // row 3
+  {
+    name: 'mushroom',
+    description: 'mushroom',
+    image: colorBars,
+    view: Channels.mushroom
+  },
+  undefined,
+  undefined,
+  undefined,
+
+  // row 4
+  undefined,
+  undefined,
+  undefined,
+  undefined
 ];

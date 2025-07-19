@@ -8,7 +8,7 @@ interface AllChannelsProps {
 
 const AllChannels = ({channels, setView} : AllChannelsProps) => {
   return (    
-    <div className="container grid ">
+    <div className="container grid">
       { 
         channels.map((channel, i) => 
           <Channel channel={channel} key={i} setView={() => setView(channel?.view)}/>

@@ -54,21 +54,6 @@ body {
   align-items: center;
 }
 
-/*
-
-These are for the bio page only, remove
-
-.channel-container p, img {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.channel-container img {
-  height: 33%;
-} 
-  
-*/
-
 .tv-frame {
   width: calc(25 * var(--size-unit)); 
   height: calc(25 * var(--size-unit));
@@ -98,4 +83,37 @@ These are for the bio page only, remove
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.view-container {
+  position: relative; /* So the close button is positioned relative to this container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 12rem;
+  right: 12rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bio-image {
+  max-height: 50%;
+  max-width: 50%;
 }
