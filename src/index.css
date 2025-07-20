@@ -13,10 +13,7 @@ body {
 .container {
   background-color: black;
   margin: 10rem;
-  box-shadow:
-              0 0 60px 30px #fff,
-              0 0 100px 60px #f0f,
-              0 0 140px 90px #0ff;
+  animation: tvFlicker 3s infinite;
 }
 
 .mushroom {
@@ -85,9 +82,8 @@ body {
   align-items: center;
 }
 
-
 .view-container {
-  position: relative; /* So the close button is positioned relative to this container */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,13 +96,12 @@ body {
   right: 12rem;
   background: rgba(0, 0, 0, 0.6);
   border: none;
-  font-size: 1rem;
   color: white;
   cursor: pointer;
   z-index: 10;
   padding: 0.5rem;
   line-height: 1;
-  transition: background 0.2s;
+  /* transition: background-color 0.2s; */
 }
 
 .close-button:hover {
@@ -116,4 +111,47 @@ body {
 .bio-image {
   max-height: 50%;
   max-width: 50%;
+}
+
+@keyframes tvFlicker {
+  0% {
+    box-shadow: 0 0 60px 30px #fff,
+                0 0 100px 60px #f0f,
+                0 0 140px 90px #0ff;
+  }
+  10% {
+    box-shadow: 0 0 58px 28px #ffe,
+                0 0 95px 55px #f0e,
+                0 0 130px 85px #0ee;
+  }
+  20% {
+    box-shadow: 0 0 62px 32px #fff,
+                0 0 105px 65px #f0f,
+                0 0 145px 95px #0ff;
+  }
+  35% {
+    box-shadow: 0 0 59px 29px #eef,
+                0 0 100px 60px #f0d,
+                0 0 140px 90px #0dd;
+  }
+  50% {
+    box-shadow: 0 0 61px 31px #fff,
+                0 0 102px 62px #f0f,
+                0 0 142px 92px #0ff;
+  }
+  65% {
+    box-shadow: 0 0 60px 30px #ffe,
+                0 0 100px 60px #f0e,
+                0 0 140px 90px #0ee;
+  }
+  80% {
+    box-shadow: 0 0 63px 33px #fff,
+                0 0 108px 68px #f0f,
+                0 0 148px 98px #0ff;
+  }
+  100% {
+    box-shadow: 0 0 60px 30px #fff,
+                0 0 100px 60px #f0f,
+                0 0 140px 90px #0ff;
+  }
 }
