@@ -7,6 +7,7 @@ import bioIcon from './assets/images/bioIcon.jpg'
 import inat from './assets/images/inat.jpg'
 import steam from  './assets/images/steam.png'
 import wordpress from './assets/images/wordpress.png'
+import logic from './assets/images/logic.jpg'
 
 import Resume from './assets/Resume.pdf'
 
@@ -86,7 +87,12 @@ export const channels: (IChannel | undefined)[] = [
     image: colorBars,
     view: Channels.mushroom
   },
-  undefined,
+  {
+    name: 'truth table calculator',
+    description: 'truth table calculator',
+    image: logic,
+    link: 'https://ncobbett.com/TruthTables'
+  },
   undefined,
   undefined,
 
