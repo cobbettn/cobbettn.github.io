@@ -21,7 +21,6 @@ body {
 .mushroom {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .channel:hover {
@@ -49,7 +48,6 @@ body {
   width: calc(100 * var(--size-unit)); 
   height: calc(100 * var(--size-unit));
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
