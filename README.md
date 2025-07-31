@@ -1,6 +1,6 @@
 [ncobbett.com](https://www.ncobbett.com)
 
-Deploys are through github actions when commits are made to main branch
+Deploys when changes are made to main branch
 
 Todo:
 
