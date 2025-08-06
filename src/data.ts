@@ -10,6 +10,7 @@ import wordpress from './assets/images/wordpress.png'
 import logic from './assets/images/logic.jpg'
 import neocities from './assets/images/neocities.png'
 import shroom from './assets/images/shroom.jpg'
+import library from './assets/images/library.png'
 
 import Resume from './assets/Resume.pdf'
 
@@ -101,7 +102,13 @@ export const channels: (IChannel | undefined)[] = [
     image: logic,
     link: 'https://ncobbett.com/TruthTables'
   },
-  undefined,
+  {
+    name: 'library',
+    description: 'library',
+    image: library,
+    link: 'https://drive.google.com/drive/folders/1Xc0dQPVoMHr11hxWENhxxsW3ZWw9j6ZP?usp=sharing'
+  },
+  
 
   // row 4
   undefined,
