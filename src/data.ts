@@ -11,6 +11,9 @@ import logic from './assets/images/logic.jpg'
 import neocities from './assets/images/neocities.png'
 import shroom from './assets/images/shroom.jpg'
 import library from './assets/images/library.png'
+import euler from './assets/images/euler.jpg'
+import hackerrank from './assets/images/hackerrank.png';
+import leetcode from './assets/images/leetcode.png'
 
 import Resume from './assets/Resume.pdf'
 
@@ -111,8 +114,23 @@ export const channels: (IChannel | undefined)[] = [
   
 
   // row 4
-  undefined,
-  undefined,
-  undefined,
+  {
+    name: 'euler',
+    description: 'project euler',
+    image: euler,
+    link: 'https://projecteuler.net/profile/cjn98.png'
+  },
+  {
+    name: 'hackerrank',
+    description: 'hackerrank',
+    image: hackerrank,
+    link: 'https://www.hackerrank.com/profile/cobbett_n'
+  },
+  {
+    name: 'leetcode',
+    description: 'leetcode',
+    image: leetcode,
+    link: 'https://leetcode.com/u/cjn98/'
+  },
   undefined
 ];
